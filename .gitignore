@@ -5,8 +5,11 @@
 /tmp
 /out-tsc
 /bazel-out
-/src/environments/environment.ts
-/src/environments/environment.prod.ts
+
+
+
+#environment variables
+.env
 
 # Node
 /node_modules
