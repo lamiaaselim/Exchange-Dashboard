@@ -1,5 +1,8 @@
 [build]
-  command = "ng build --configuration=production"
-  functions = "netlify/functions"
+  command = "NG_APP_API_KEY=$NG_APP_API_KEY ng build --configuration=production"
   publish = "dist/exchange-dashboard/browser"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval'"
