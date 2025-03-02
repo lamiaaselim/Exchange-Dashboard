@@ -1,0 +1,39 @@
+<div class="container bg-light p-3 rounded">
+  <button (click)="toggleEditMode()" class="btn btn-primary shadow mb-3">
+    {{ isEditMode ? "View Mode" : "Edit Mode" }}
+  </button>
+
+  <div *ngIf="isEditMode" class="m-2 text-center">
+    <button
+      (click)="toggleChart('lineChart')"
+      class="btn btn-outline-primary m-2 shadow"
+    >
+      {{ showLineChart ? "Hide Line Chart" : "Show Line Chart" }}
+    </button>
+    <button
+      (click)="toggleChart('barChart')"
+      class="btn btn-outline-success shadow"
+    >
+      {{ showBarChart ? "Hide Bar Chart" : "Show Bar Chart" }}
+    </button>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-3" *ngIf="showLineChart">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">Line Chart</div>
+        <div class="card-body">
+          <canvas id="lineChart" class="w-100 h-auto"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3" *ngIf="showBarChart">
+      <div class="card shadow">
+        <div class="card-header bg-success text-white">Bar Chart</div>
+        <div class="card-body">
+          <canvas id="barChart" class="w-100 h-auto"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
