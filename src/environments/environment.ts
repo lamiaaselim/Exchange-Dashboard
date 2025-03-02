@@ -1,4 +1,10 @@
+declare var process: {
+  env: {
+    NG_APP_API_KEY: string;
+  };
+};
+
 export const environment = {
-  production: false,
-  apiKey: process.env['NG_APP_API_KEY'] || '',
+  production: true,
+  apiKey: process.env.NG_APP_API_KEY || '',
 };
