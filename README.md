@@ -47,7 +47,7 @@ Ensure you have the following installed:
      ```ts
      export const environment = {
        production: false,
-       apiKey: 'Q5Qhp4Fn8fh5DDFvsgs5duzHTpyQi9K0',
+       apiKey: '0000000000',
      };
      ```
 
