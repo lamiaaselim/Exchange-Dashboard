@@ -3,5 +3,3 @@
   functions = "netlify/functions"
   publish = "dist/exchange-dashboard/browser"
 
-[[plugins]]
-  package = "@netlify/plugin-inline-functions-env"
